@@ -3,7 +3,8 @@ import './App.css'
 import Home from './Pages/Home'
 import Courses from './Pages/Courses'
 import Dictionary from './Pages/Dictionary'
-import Navbar from './Navbar'
+import Navbar from './Pages/Navbar'
+import Profile from './Pages/Profile'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/dictionary" element={<Dictionary />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </>

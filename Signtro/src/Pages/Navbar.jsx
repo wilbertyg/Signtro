@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-
+import Logo from '../assets/logo.svg';
+import Profile from '../assets/profile.svg';
 import "./Navbar.css";
 
 function Navbar() {
@@ -7,8 +8,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="nav-logo">
                 <Link to="/">
-                    {/* <img src={$} alt="Signtro" className="logo" /> */}
-                    asd
+                    <img src={Logo} alt="Signtro" className="logo" />
                 </Link>
             </div>
             <div className="nav-links">
@@ -17,9 +17,9 @@ function Navbar() {
                 <Link to="/dictionary">Dictionary</Link>
             </div>
             <div>
-                {/* <Link to="/profile" className="nav-profile">
+                <Link to="/profile" className="nav-profile">
                     <img src={Profile} alt="Profile" className="profile" />
-                </Link> */}
+                </Link>
             </div>
         </nav>
     );
