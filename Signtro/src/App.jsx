@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 import './App.css'
+import Home from './Pages/Home'
+import Courses from './Pages/Courses'
+import Dictionary from './Pages/Dictionary'
 import Navbar from './Navbar'
-import Home from './Home/'
 
 function App() {
 
