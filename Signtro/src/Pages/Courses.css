@@ -1,0 +1,95 @@
+/* General Container Styles */
+.courses-container {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5fff5; /* Light green background */
+    min-height: 100vh; /* Ensure the layout fills the screen without stretching */
+    box-sizing: border-box;
+    align-items: flex-start; /* Align the sections to the top */
+}
+  
+  /* Left Side: Course List */
+.course-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+  
+/* Individual Course Card */
+.course-card {
+    background-color: #d9f9d9; /* Light green card */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+  
+.course-card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+  
+.course-card p {
+    margin: 5px 0 10px;
+    color: #666;
+}
+  
+ /* Progress Bar */
+.progress-bar {
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+  
+.progress {
+    height: 100%;
+    background-color: #4caf50; /* Green progress */
+    border-radius: 5px;
+    color: white;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 10px;
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertical alignment */
+    justify-content: center;
+}
+  
+/* Right Side: Course Details */
+.course-details {
+    flex: 1;
+    background-color: #eafbe6; /* Light background for details */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-height: 70vh; /* Limit height to 70% of the screen */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+  
+.course-details h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+  
+.course-details p {
+    color: #444;
+    line-height: 1.6;
+}
+  
+.course-details ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+  
+.course-details li {
+    margin-bottom: 10px;
+    color: #555;
+}
+  
