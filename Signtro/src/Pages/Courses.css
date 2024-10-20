@@ -1,29 +1,26 @@
-/* General Container Styles */
 .courses-container {
     margin-top: 100px;
     display: flex;
     gap: 20px;
     padding: 20px;
-    background-color: #f5fff5; /* Light green background */
-    min-height: 100vh; /* Ensure the layout fills the screen without stretching */
+    background-color: #f5fff5; 
+    min-height: 100vh; 
     box-sizing: border-box;
-    align-items: flex-start; /* Align the sections to the top */
+    align-items: flex-start; 
 }
-  
-  /* Left Side: Course List */
+
 .course-list {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
-  
-/* Individual Course Card */
+
 .course-card {
-    background-color: #d9f9d9; /* Light green card */
+    background-color: #d9f9d9; 
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
   
 .course-card h2 {
@@ -37,8 +34,7 @@
     margin: 5px 0 10px;
     color: #666;
 }
-  
- /* Progress Bar */
+
 .progress-bar {
     height: 30px;
     background-color: #e0e0e0;
@@ -49,26 +45,25 @@
   
 .progress {
     height: 100%;
-    background-color: #4caf50; /* Green progress */
+    background-color: #4caf50; 
     border-radius: 5px;
     color: white;
     font-size: 0.95rem;
     text-align: center;
     line-height: 10px;
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Vertical alignment */
+    display: flex; 
+    align-items: center; 
     justify-content: center;
 }
-  
-/* Right Side: Course Details */
+
 .course-details {
     flex: 1;
-    background-color: #eafbe6; /* Light background for details */
+    background-color: #eafbe6; 
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-height: 70vh; /* Limit height to 70% of the screen */
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-height: 70vh; 
+    overflow-y: auto; 
 }
   
 .course-details h2 {

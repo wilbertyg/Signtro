@@ -28,9 +28,9 @@ function Footer() {
                     <h3 className="section-title">Media</h3>
                     <div className="social-icons">
                         <a href="https://www.facebook.com/"><img src={FacebookIcon} alt="Facebook" className="social-icon" /></a>
-                        <a href="https://www.instagram.com/"><img src={InstagramIcon} alt="Instagram" className="social-icon" /></a>
-                        <a href="https://x.com/"><img src={TwitterIcon} alt="Twitter" className="social-icon" /></a>
-                        <a href="https://www.youtube.com/"><img src={YouTubeIcon} alt="YouTube" className="social-icon" /></a>
+                        <a href="https://www.instagram.com/signtroduction/"><img src={InstagramIcon} alt="Instagram" className="social-icon" /></a>
+                        <a href="https://x.com/signtroduction"><img src={TwitterIcon} alt="Twitter" className="social-icon" /></a>
+                        <a href="https://www.youtube.com/@Signtro"><img src={YouTubeIcon} alt="YouTube" className="social-icon" /></a>
                     </div>
                 </div>
             </div>
