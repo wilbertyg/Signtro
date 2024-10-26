@@ -1,5 +1,5 @@
 .courses-container {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     display: flex;
     gap: 20px;
     padding: 20px;
@@ -7,7 +7,10 @@
     box-sizing: border-box;
     align-items: flex-start;
     width: 180vh;
-  }
+    justify-content: center;
+    align-items: center;
+    margin-left: 6%;
+}
   
 .course-list {
     flex: 1;
