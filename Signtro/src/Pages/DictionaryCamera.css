@@ -1,0 +1,43 @@
+.camera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    width: 185vh;
+}
+  
+.button-container {
+    margin: 15px;
+}
+  
+.camera-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+  
+.camera-button:hover {
+    background-color: #45a049;
+}
+  
+.webcam-container {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100%;
+    max-width: 840px;
+    position: relative;
+}
+  
+.webcam-stream {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+}
+  
