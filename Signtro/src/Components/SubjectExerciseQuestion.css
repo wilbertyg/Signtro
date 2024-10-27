@@ -25,15 +25,13 @@
     z-index: 1;             /* Make sure labels and images stay above lines */
 }
 
-.connector-line {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: black;
+.selected {
+    border: deepskyblue 2px solid;
 }
 
-.label, .image {
-    position: relative;
-    z-index: 1;             /* Make sure labels and images stay above lines */
+.button {
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }

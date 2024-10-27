@@ -143,7 +143,7 @@ function SubjectExerciseQuestion(args) {
                                         sourceAnchor: 'right'
                                     }))}>
                                     <button
-                                        className={`label ${selectedLabelIndex === index ? "selected" : ""}`}
+                                        className={`button ${selectedLabelIndex === index ? "selected" : ""}`}
                                         onClick={() => handleLabelClick(index)}>
                                         {option.label}
                                     </button>
@@ -162,7 +162,7 @@ function SubjectExerciseQuestion(args) {
                                         sourceAnchor: 'left'
                                     }))}*/>
                                     <button
-                                        className={`image ${selectedImageIndex === index ? 'selected' : ''}`}
+                                        className={`button ${selectedImageIndex === index ? 'selected' : ''}`}
                                         onClick={() => handleImageClick(index)}>
                                         <img src={handSignImages[option.image]} className="image" />
                                     </button>

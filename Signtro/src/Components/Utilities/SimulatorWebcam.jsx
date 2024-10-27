@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Webcam from "react-webcam";
+import './SimulatorWebcam.css';
 
 function SimulatorWebcam(correctAnswer) {
     const WebcamCapture = () => {
@@ -19,7 +20,7 @@ function SimulatorWebcam(correctAnswer) {
 
                 const imageSrc = webcamRef.current.getScreenshot();
                 setImgSrc(imageSrc);
-            }, 4000);
+            }, 5000);
 
             return () => clearInterval(interval);
         }, []);
