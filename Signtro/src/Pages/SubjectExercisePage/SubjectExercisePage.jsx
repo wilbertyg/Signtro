@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams, useParams } from 'react-router-dom';
 import SubjectExercise from "../../Components/SubjectExercise.jsx";
 import SubjectExerciseQuestion from "../../Components/SubjectExerciseQuestion.jsx";
 import data from '../../../db.json';
+import './SubjectExercisePage.css';
 
 function SubjectExercisePage() {
     const { exerciseId } = useParams();
@@ -41,7 +42,7 @@ function buildExerciseContent(exerciseData) {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div className="exercise-container">
             {subjectExerciseRendering}
             <button style={{ backgroundColor: 'white', borderColor: 'black'}} onClick={() => {
                 navigate('?questionId=' + exerciseData.questionIds[0]);
@@ -132,7 +133,7 @@ function buildQuestionsContent(questionIds, questionId) {
     let nextQuestionId = index === questionIds.length - 1 ? questionIds[0] : questionIds[index + 1];
 
     return (
-        <div>
+        <div className="container">
             <div className="button-section">
                 {questionIds.map((id, index) => (
                     <button
@@ -151,23 +152,25 @@ function buildQuestionsContent(questionIds, questionId) {
                 ))}
             </div>
             {exerciseQuestionRendering}
-            <button style={{ backgroundColor: 'white', borderColor: 'black'}} onClick={() => {
-                navigate('?questionId=' + previousQuestionId);
-                window.location.reload();
-            }}>
-                Previous
-            </button>
-            <button style={{ backgroundColor: 'white', borderColor: 'black'}} onClick={() => {
-                alert("Saved!");
-            }}>
-                Save
-            </button>
-            <button style={{ backgroundColor: 'white', borderColor: 'black'}} onClick={() => {
-                navigate('?questionId=' + nextQuestionId);
-                window.location.reload();
-            }}>
-                Next
-            </button>
+            <div className={"action-buttons-container"}>
+                <button style={{ backgroundColor: 'white', borderColor: 'black'}} onClick={() => {
+                    navigate('?questionId=' + previousQuestionId);
+                    window.location.reload();
+                }}>
+                    Previous
+                </button>
+                <button style={{ backgroundColor: 'white', borderColor: 'black'}} onClick={() => {
+                    alert("Saved!");
+                }}>
+                    Save
+                </button>
+                <button style={{ backgroundColor: 'white', borderColor: 'black'}} onClick={() => {
+                    navigate('?questionId=' + nextQuestionId);
+                    window.location.reload();
+                }}>
+                    Next
+                </button>
+            </div>
         </div>
     );
 }

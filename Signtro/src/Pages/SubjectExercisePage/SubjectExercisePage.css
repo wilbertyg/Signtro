@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.exercise-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 100px;
+}
+
+.button-section {
+    display: flex;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+button {
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.action-buttons-container {
+    display: flex;
+    gap: 10px;
+}
