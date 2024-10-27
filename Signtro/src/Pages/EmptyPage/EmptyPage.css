@@ -1,0 +1,17 @@
+/* EmptyPage.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+    padding: 0;
+    position: absolute;
+}
+
+h1, h2 {
+    width: 100%;
+    margin: 0;
+}

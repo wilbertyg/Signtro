@@ -1,0 +1,39 @@
+#matching-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#labels, #images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;             /* Ensure buttons are above the SVG lines */
+}
+
+#lines {
+    flex: 1;
+    position: relative;
+}
+
+.label, .image {
+    width: 125px;
+    height: 125px;
+    margin: 10px 0;
+    position: relative;
+    z-index: 1;             /* Make sure labels and images stay above lines */
+}
+
+.connector-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.label, .image {
+    position: relative;
+    z-index: 1;             /* Make sure labels and images stay above lines */
+    cursor: pointer;
+}
