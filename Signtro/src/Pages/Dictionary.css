@@ -1,0 +1,56 @@
+.alignment {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dictionary-container { 
+    margin-top: 20px !important;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.dictionary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    justify-items: center; 
+    align-items: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+
+.dictionary-item {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 100%; 
+    max-width: 150px; 
+}
+
+.dictionary-item:hover {
+    transform: scale(1.05);
+}
+
+.dictionary-item img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .dictionary-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .dictionary-grid {
+        grid-template-columns: 1fr; 
+    }
+}
