@@ -6,12 +6,12 @@ import Signtro from "../assets/Signtro.svg";
 function NavigationBar() {
     return (
         <>
-            <Navbar bg="light" data-bs-theme="light" className="shadow-sm">
-                <Container>
-                    <Navbar.Brand href="/" >
-                        <Image src={Signtro} alt="Signtro" width={108} height={36}/>
+            <Navbar bg="light" data-bs-theme="light" className="shadow-sm" style={{ marginLeft: '10px', marginRight: '10px' }}>
+                <Container fluid>
+                    <Navbar.Brand href="/" style={{ width: '36px' }}>
+                        <Image src={Signtro} alt="Signtro" width={108} height={36} />
                     </Navbar.Brand>
-                    <Nav className="justify-content-center" style={{ marginRight: '2.5rem', gap: '60px'}}>
+                    <Nav className="justify-content-center" style={{ gap: '60px'}}>
                         <Nav.Link href="/" className="fw-bold">Home</Nav.Link>
                         <Nav.Link href="/courses" className="fw-bold">Courses</Nav.Link>
                         <Nav.Link href="/dictionary" className="fw-bold">Dictionary</Nav.Link>
