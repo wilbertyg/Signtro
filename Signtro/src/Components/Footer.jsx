@@ -8,7 +8,7 @@ import YouTube from "../assets/YouTube.svg";
 
 function Footer() {
     return (
-        <Navbar fixed="bottom" bg="light" data-bs-theme="light" className="shadow-lg">
+        <Navbar bg="light" data-bs-theme="light" className="shadow-lg">
             <Container fluid className="flex-column" style={{ marginLeft: '10px', marginRight: '10px', marginBottom: '20px'}}>
                 <Row style={{ width: '100%' }}>
                     <Col>

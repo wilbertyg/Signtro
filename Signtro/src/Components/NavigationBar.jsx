@@ -6,7 +6,7 @@ import Signtro from "../assets/Signtro.svg";
 function NavigationBar() {
     return (
         <>
-            <Navbar bg="light" data-bs-theme="light" className="shadow-sm" style={{ marginLeft: '10px', marginRight: '10px' }}>
+            <Navbar bg="light" data-bs-theme="light" className="shadow-sm">
                 <Container fluid>
                     <Navbar.Brand href="/" style={{ width: '36px' }}>
                         <Image src={Signtro} alt="Signtro" width={108} height={36} />
