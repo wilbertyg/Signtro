@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Webcam from "react-webcam";
-import './SimulatorWebcam.css';
 
 function SimulatorWebcam(correctAnswer) {
     const WebcamCapture = () => {
