@@ -5,8 +5,9 @@ import Background from "../../assets/backgrounds/Background - Sign Language Abst
 
 function Dictionary() {
     return (
-        <>
-            <Container fluid className="flex-row" style={{margin: '25px 0px'}}>
+        <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+            <Container fluid className="flex-grow-1 flex-column justify-content-center"
+                       style={{margin: '25px 0px'}}>
                 <div style={{
                     backgroundImage: `url(${Background})`,
                     backgroundSize: '100vh',
@@ -18,7 +19,7 @@ function Dictionary() {
                     height: '100vh',
                     zIndex: -1
                 }}/>
-                <Row style={{marginBottom: '50px'}}>
+                <Row>
                     <h1 className="fw-bold text-center text-wrap" style={{color: 'limegreen'}}>
                         26 Huruf. 26 Isyarat Tangan.
                     </h1>
@@ -36,7 +37,7 @@ function Dictionary() {
                 </div>
             </Container>
             <Footer/>
-        </>
+        </div>
     );
 }
 

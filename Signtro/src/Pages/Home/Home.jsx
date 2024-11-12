@@ -10,8 +10,8 @@ function Home() {
     const navigate = useNavigate();
 
     return (
-        <>
-            <Container fluid className="flex-row">
+        <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+            <Container fluid className="flex-grow-1 flex-column justify-content-center">
                 <div style={{
                     backgroundImage: `url(${Background})`,
                     backgroundSize: '100vh',
@@ -41,7 +41,8 @@ function Home() {
                                 </Button>
                             </Col>
                             <Col md="auto" className="d-flex justify-content-center">
-                                <Image src={Illustration} alt="Illustration" width={450} height={450} style={{zIndex: '-2'}}/>
+                                <Image src={Illustration} alt="Illustration" width={450} height={450}
+                                       style={{zIndex: '-2'}}/>
                             </Col>
                         </Stack>
                     </Row>
@@ -85,13 +86,14 @@ function Home() {
                 </Stack>
                 <Stack direction="vertical" className="align-items-center justify-content-center"
                        style={{margin: '100px 25px'}}>
-                    <Button className="justify-content-center align-items-center btn-primary" size="lg" onClick={() => navigate('/courses')}>
+                    <Button className="justify-content-center align-items-center btn-primary" size="lg"
+                            onClick={() => navigate('/courses')}>
                         🚀 Tunggu apa lagi? Yuk coba sekarang!
                     </Button>
                 </Stack>
             </Container>
             <Footer/>
-        </>
+        </div>
     );
 }
 
