@@ -30,8 +30,8 @@
   
 .card {
     position: relative;
-    width: 30vh;
-    height: 30vh;
+    width: 50vh;
+    height: 50vh;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
@@ -52,4 +52,3 @@
     align-self: center;
     justify-self: center;
 }
-  
