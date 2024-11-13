@@ -1,20 +1,24 @@
 import Footer from "../../Components/Footer.jsx";
 import {Button, Card, Col, Container, FloatingLabel, Form, Image, Row, Stack} from "react-bootstrap";
 import Background from "../../assets/backgrounds/Background - Sign Language Abstract.svg";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import './Profile.css'
 
 function Profile() {
+    useEffect(() => {
+        document.title = 'Profile | Signtro';
+    }, []);
+
     const [originalFormData, setOriginalFormData] = useState({
         username: "John Doe",
-        email: "john.doe@gmail.com",
+        email_address: "john.doe@gmail.com",
         password: "john.doe",
         language: "Bisindo",
     });
 
     const [formData, setFormData] = useState({
         username: originalFormData.username,
-        email: originalFormData.email,
+        email_address: originalFormData.email_address,
         password: originalFormData.password,
         language: originalFormData.language
     });
@@ -40,7 +44,7 @@ function Profile() {
         console.log("[SUCCESS] Saved data: ", formData);
         alert("Data saved successfully!\r\n\n" +
             "Username: " + formData.username + "\r\n" +
-            "Email: " + formData.email + "\r\n" +
+            "Email: " + formData.email_address + "\r\n" +
             "Password: " + formData.password + "\r\n" +
             "Language: " + formData.language);
 
@@ -83,7 +87,7 @@ function Profile() {
                             controlId="FL_Email"
                             label="Email address"
                             className="mb-3">
-                            <Form.Control type="email" name="email" placeholder="name@example.com" value={formData.email} onChange={handleInputChange}/>
+                            <Form.Control type="email" name="email" placeholder="name@example.com" value={formData.email_address} onChange={handleInputChange}/>
                         </FloatingLabel>
                         <FloatingLabel
                             controlId="FL_Password"
@@ -97,7 +101,7 @@ function Profile() {
                             <Stack direction="horizontal" className="mb-3 gap-3">
                                 {languages.map((lang, index) => (
                                     <div key={index}
-                                         className={`lang-item ${formData.language === lang.name ? "active" : ""}`}
+                                         className={`lang-item ${formData.language === lang.name ? "selected" : ""}`}
                                          onClick={() => handleLanguageChange(lang.name)}>
                                         <Image src={"asset-bulks/sign-language-logos/" + lang.imgSrc} alt={lang.name}/>
                                         <p className="fw-bold">{lang.name}</p>

@@ -1,8 +1,13 @@
 import Footer from "../../Components/Footer.jsx";
 import {Container} from "react-bootstrap";
 import Background from "../../assets/backgrounds/Background - Sign Language Abstract.svg";
+import {useEffect} from "react";
 
 function Error() {
+    useEffect(() => {
+        document.title = '404 Not Found | Signtro';
+    }, []);
+
     return (
         <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
             <Container fluid className="flex-grow-1 d-flex flex-column justify-content-center"

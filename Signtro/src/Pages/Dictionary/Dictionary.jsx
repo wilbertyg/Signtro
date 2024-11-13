@@ -2,8 +2,13 @@ import Footer from "../../Components/Footer.jsx";
 import {Container, Image, Row} from "react-bootstrap";
 import './Dictionary.css';
 import Background from "../../assets/backgrounds/Background - Sign Language Abstract.svg";
+import {useEffect} from "react";
 
 function Dictionary() {
+    useEffect(() => {
+        document.title = 'Dictionary | Signtro';
+    }, []);
+
     return (
         <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
             <Container fluid className="flex-grow-1 flex-column justify-content-center"

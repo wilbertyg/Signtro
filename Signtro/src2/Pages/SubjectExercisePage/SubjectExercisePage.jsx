@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import { useNavigate, useSearchParams, useParams } from 'react-router-dom';
 import SubjectExercise from "../../Components/SubjectExercise.jsx";
 import SubjectExerciseQuestion from "../../Components/SubjectExerciseQuestion.jsx";
-import data from '../../../db.json';
+import data from '../../../public/api/db.json';
 import './SubjectExercisePage.css';
 
 function SubjectExercisePage() {

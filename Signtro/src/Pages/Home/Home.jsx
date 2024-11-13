@@ -1,4 +1,5 @@
 import Footer from "../../Components/Footer.jsx";
+import {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import {Button, Col, Container, Image, Row, Stack} from "react-bootstrap";
 import Background from "../../assets/backgrounds/Background - Sign Language Abstract.svg";
@@ -7,6 +8,10 @@ import Sign_Language from "../../assets/stock-images/Sign-Language.png";
 import Computer_Vision_Palm from "../../assets/stock-images/Computer-Vision-Palm.png";
 
 function Home() {
+    useEffect(() => {
+        document.title = 'Home | Signtro';
+    }, []);
+
     const navigate = useNavigate();
 
     return (
