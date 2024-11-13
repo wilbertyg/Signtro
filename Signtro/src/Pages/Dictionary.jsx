@@ -1,82 +1,53 @@
 import React from 'react';
 import './Dictionary.css';
-import { useNavigate } from 'react-router-dom';
-import letterA from '../assets/A.png'
-import letterB from '../assets/B.png'
-import letterC from '../assets/C.png'
-import letterD from '../assets/D.png'
-import letterE from '../assets/E.png'
-import letterF from '../assets/F.png'
-import letterG from '../assets/G.png'
-import letterH from '../assets/H.png'
-import letterI from '../assets/I.png'
-import letterJ from '../assets/J.png'
-import letterK from '../assets/K.png'
-import letterL from '../assets/L.png'
-import letterM from '../assets/M.png'
-import letterN from '../assets/N.png'
-import letterO from '../assets/O.png'
-import letterP from '../assets/P.png'
-import letterQ from '../assets/Q.png'
-import letterR from '../assets/R.png'
-import letterS from '../assets/S.png'
-import letterT from '../assets/T.png'
-import letterU from '../assets/U.png'
-import letterV from '../assets/V.png'
-import letterW from '../assets/W.png'
-import letterX from '../assets/X.png'
-import letterY from '../assets/Y.png'
-import letterZ from '../assets/Z.png'
 
-const signLanguageData = [
-  { letter: 'A', image: letterA },
-  { letter: 'B', image: letterB },
-  { letter: 'C', image: letterC },
-  { letter: 'D', image: letterD },
-  { letter: 'E', image: letterE },
-  { letter: 'F', image: letterF },
-  { letter: 'G', image: letterG },
-  { letter: 'H', image: letterH },
-  { letter: 'I', image: letterI },
-  { letter: 'J', image: letterJ },
-  { letter: 'K', image: letterK },
-  { letter: 'L', image: letterL },
-  { letter: 'M', image: letterM },
-  { letter: 'N', image: letterN },
-  { letter: 'O', image: letterO },
-  { letter: 'P', image: letterP },
-  { letter: 'Q', image: letterQ },
-  { letter: 'R', image: letterR },
-  { letter: 'S', image: letterS },
-  { letter: 'T', image: letterT },
-  { letter: 'U', image: letterU },
-  { letter: 'V', image: letterV },
-  { letter: 'W', image: letterW },
-  { letter: 'X', image: letterX },
-  { letter: 'Y', image: letterY },
-  { letter: 'Z', image: letterZ },
-];
+const Dictionary = () => {
+  const signs = [
+    { letter: 'A', imgSrc: './src/assets/A.png' },
+    { letter: 'B', imgSrc: './src/assets/B.png' },
+    { letter: 'C', imgSrc: './src/assets/C.png' },
+    { letter: 'D', imgSrc: './src/assets/D.png' },
+    { letter: 'E', imgSrc: './src/assets/E.png' },
+    { letter: 'F', imgSrc: './src/assets/F.png' },
+    { letter: 'G', imgSrc: './src/assets/G.png' },
+    { letter: 'H', imgSrc: './src/assets/H.png' },
+    { letter: 'I', imgSrc: './src/assets/I.png' },
+    { letter: 'J', imgSrc: './src/assets/J.png' },
+    { letter: 'K', imgSrc: './src/assets/K.png' },
+    { letter: 'L', imgSrc: './src/assets/L.png' },
+    { letter: 'M', imgSrc: './src/assets/M.png' },
+    { letter: 'N', imgSrc: './src/assets/N.png' },
+    { letter: 'O', imgSrc: './src/assets/O.png' },
+    { letter: 'P', imgSrc: './src/assets/P.png' },
+    { letter: 'Q', imgSrc: './src/assets/Q.png' },
+    { letter: 'R', imgSrc: './src/assets/R.png' },
+    { letter: 'S', imgSrc: './src/assets/S.png' },
+    { letter: 'T', imgSrc: './src/assets/T.png' },
+    { letter: 'U', imgSrc: './src/assets/U.png' },
+    { letter: 'V', imgSrc: './src/assets/V.png' },
+    { letter: 'W', imgSrc: './src/assets/W.png' },
+    { letter: 'X', imgSrc: './src/assets/X.png' },
+    { letter: 'Y', imgSrc: './src/assets/Y.png' },
+    { letter: 'Z', imgSrc: './src/assets/Z.png' }
+  ];
 
-export default function Dictionary() {
-  const navigate = useNavigate();
   return (
-    <div className="dictionary-container">
-      {/* Button to navigate to a different page */}
-      <div className="button-container">
-        <button 
-          className="navigate-button" 
-          onClick={() => navigate('/DictionaryCamera')}
-        >
-          Try it yourself !
-        </button>
-      </div>
-      {/* Render sign language cards */}
-      {signLanguageData.map((item, index) => (
-        <div className="card" key={index}>
-          <div className="letter-overlay">{item.letter}</div>
-          <img src={item.image} alt={`Sign language for ${item.letter}`} className="sign-image" />
+    <>
+    <div className='alignment'>
+      <div className="dictionary-container">
+        <h1>Dictionary</h1>
+        <div className="dictionary-grid">
+          {signs.map((sign, index) => (
+            <div key={index} className="dictionary-item">
+              <h2>{sign.letter}</h2>
+              <img src={sign.imgSrc} alt={`Sign for ${sign.letter}`} />
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
+    </>
   );
-}
+};
+
+export default Dictionary;
