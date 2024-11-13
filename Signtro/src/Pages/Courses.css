@@ -11,14 +11,14 @@
     align-items: center;
     margin-left: 6%;
 }
-  
+
 .course-list {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-  
+
 .course-card {
     background-color: #d9f9d9;
     padding: 15px;
@@ -28,19 +28,19 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
-  
+
 .course-card h2 {
     margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
 }
-  
+
 .course-card p {
     margin: 5px 0 10px;
     color: #666;
 }
-  
+
 .progress-bar {
     height: 30px;
     background-color: #e0e0e0;
@@ -48,7 +48,7 @@
     overflow: hidden;
     position: relative;
 }
-  
+
 .progress {
     height: 100%;
     background-color: #3DFF5A;
@@ -58,7 +58,7 @@
     text-align: center;
     line-height: 30px;
 }
-  
+
 .dropdown-content {
     height: 0;
     overflow: hidden;
@@ -71,31 +71,31 @@
     transition: height 0.3s ease, opacity 0.3s ease;
     opacity: 0;
 }
-  
+
 .dropdown-content.show {
     height: 60px;
     opacity: 1;
 }
-  
+
 .circle {
     width: 40px;
     height: 40px;
-    background-color: #3DFF5A; 
-    border-radius: 50%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    transition: transform 0.3s ease; 
+    background-color: #3DFF5A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
 }
 
 .circle a {
-    text-decoration: none; 
-    color: black; 
-    font-size: 20px; 
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
 }
 
 .course-card.open .circle {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 .course-details {
@@ -107,26 +107,25 @@
     max-height: 70vh;
     overflow-y: auto;
 }
-  
+
 .course-details h2 {
     margin-top: 0;
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
 }
-  
+
 .course-details p {
     color: #444;
     line-height: 1.6;
 }
-  
+
 .course-details ul {
     padding-left: 20px;
     list-style-type: disc;
 }
-  
+
 .course-details li {
     margin-bottom: 10px;
     color: #555;
 }
-  
