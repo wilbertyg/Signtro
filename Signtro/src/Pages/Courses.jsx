@@ -10,7 +10,7 @@ export default function Courses() {
       progress: 20, 
       description: 'Description for Course 1',
       circles: [
-        { id: 1, link: '/' }, 
+        { id: 1, link: '/exercises/1' }, 
         { id: 2, link: '/dictionary' }, 
         { id: 3, link: '/link3' }, 
         { id: 4, link: '/link4' }, 

@@ -1,0 +1,40 @@
+#matching-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#labels, #images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+}
+
+#lines {
+    flex: 1;
+    position: relative;
+}
+
+.label, .image {
+    width: 125px;
+    height: 125px;
+    position: relative;
+    z-index: 1;
+}
+
+button {
+    padding: 0;
+}
+
+.selected {
+    border: deepskyblue 2px solid;
+}
+
+.button {
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
