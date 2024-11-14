@@ -1,0 +1,41 @@
+.course-container {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.course-card {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+.progress-bar {
+    background-color: limegreen;
+}
+
+.selected-course {
+    color: limegreen;
+    transition: 0.3s;
+}
+
+.exercise-button {
+    background-color: white;
+    border-color: limegreen;
+    margin: 0px;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.exercise-button:hover {
+    background-color: limegreen;
+    border-color: white;
+}

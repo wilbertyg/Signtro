@@ -1,8 +1,12 @@
-# React + Vite
+# Signtro - Interactive Learning Platform for Sign Language
+#### // Responsive version, based on the branches by Jovan, Leonardo, Marco, Wilbert, and Raihan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## To run and simulate the project, you need to do the following steps:
+1. Run the project in dev configuration.
+2. Run the terminal commands below in order for the fake API to run:
+```bash
+cd Signtro
+json-server --watch public/api/db.json --port 3000
+```
+3. Open the browser and go to the local host.
+4. You're good to go!

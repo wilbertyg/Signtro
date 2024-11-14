@@ -1,0 +1,363 @@
+{
+  "users": [
+    {
+      "id": "UID0001",
+      "role": "User",
+      "username": "John Doe",
+      "email_address": "john.doe@gmail.com",
+      "password": "john.doe",
+      "language": "Bisindo",
+      "taken_exercises": [
+        {
+          "id": "CEID0001",
+          "completion_status": "In progress",
+          "points_earned": 30
+        }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "id": "CID0001",
+      "name": "Ayo Belajar Alfabet!",
+      "level": "Beginner",
+      "description": "Alfabet adalah dasar dari bahasa. Tidak hanya dalam bahasa lisan, alfabet juga bisa diungkapkan dengan tangan. Kursus ini akan membantu kamu mengenal alfabet dalam Bahasa Isyarat Indonesia.",
+      "learning_objectives": [
+        "Mengenal alfabet dalam Bahasa Isyarat Indonesia",
+        "Mengidentifikasi gerakan tangan untuk setiap huruf",
+        "Mempelajari cara membentuk gerakan tangan untuk setiap huruf"
+      ],
+      "total_points": 80,
+      "course_exercises": [
+        {
+          "id": "CEID0001",
+          "icon": "\uD83C\uDFA8"
+        },
+        {
+          "id": "CEID0002",
+          "icon": "\uD83D\uDE4C"
+        }
+      ]
+    },
+    {
+      "id": "CID0002",
+      "name": "-Angka+ke*Angka/",
+      "level": "Beginner",
+      "description": "Angka hanya sekadar angka? Tidak! Angka-angka juga bisa kita ungkapkan dengan tangan kita. Kursus ini akan membantu kamu mengenal angka dalam Bahasa Isyarat Indonesia.",
+      "learning_objectives": [
+        "Mengenal angka dalam Bahasa Isyarat Indonesia",
+        "Mengidentifikasi gerakan tangan untuk setiap angka",
+        "Mempelajari cara membentuk gerakan tangan untuk setiap angka"
+      ],
+      "total_points": 100,
+      "course_exercises": [
+      ]
+    }
+  ],
+  "course_exercises": [
+    {
+      "id": "CEID0001",
+      "title": "Seni Gerak-Gerik Tangan",
+      "description": "Seni adalah ekspresi diri. Gerak-gerik tangan kita pun bisa menjadi ekspresi diri kita. Latihan ini akan membantu kamu mengenal gerakan tangan untuk setiap huruf dalam alfabet.",
+      "status": "Available",
+      "difficulty": "Easy",
+      "points": 30,
+      "exercise_questions": [
+        "CEQID0001",
+        "CEQID0002",
+        "CEQID0003",
+        "CEQID0004",
+        "CEQID0005",
+        "CEQID0006",
+        "CEQID0007",
+        "CEQID0008",
+        "CEQID0009",
+        "CEQID0010"
+      ],
+      "prerequisite_exercises": []
+    },
+    {
+      "id": "CEID0002",
+      "title": "Sambung Menyambung...",
+      "description": "Setelah mengenal alfabet, saatnya kita mengenal kata. Latihan ini akan membantu kamu mengenal gerakan tangan untuk beberapa kata dalam Bahasa Isyarat Indonesia.",
+      "status": "Available",
+      "difficulty": "Medium",
+      "points": 50,
+      "exercise_questions": [
+        "CEQID0011",
+        "CEQID0012",
+        "CEQID0013",
+        "CEQID0014",
+        "CEQID0015"
+      ],
+      "prerequisite_exercises": []
+    }
+  ],
+  "exercise_questions": [
+    {
+      "id": "CEQID0001",
+      "points": 2,
+      "text": "Identifikasi gerakan tangan untuk huruf 'A'.",
+      "type": "Multiple",
+      "answer_options": [
+        {
+          "text": "A",
+          "image": "HS-A.png"
+        },
+        {
+          "text": "C",
+          "image": "HS-C.png"
+        },
+        {
+          "text": "B",
+          "image": "HS-B.png"
+        }
+      ],
+      "correct_answer": "A",
+      "feedback": "Gerakan tangan untuk huruf 'A' ditunjukkan oleh gambar pertama."
+    },
+    {
+      "id": "CEQID0002",
+      "points": 3,
+      "text": "Simulasikan gerakan tangan untuk huruf 'A'.",
+      "type": "Simulation",
+      "answer_options": [],
+      "correct_answer": "A",
+      "feedback": "Gerakan tangan untuk huruf 'A' dibuat dengan membentuk segitiga dengan jempol yang diperpanjang."
+    },
+    {
+      "id": "CEQID0003",
+      "points": 4,
+      "text": "Sesuaikan setiap huruf dengan gerakan tangan yang sesuai.",
+      "type": "Matching",
+      "answer_options": [
+        { 
+          "label": "A", 
+          "image": "HS-B.png"
+        },
+        { 
+          "label": "C", 
+          "image": "HS-A.png"
+        },
+        { 
+          "label": "B", 
+          "image": "HS-C.png"
+        }
+      ],
+      "correct_answer": [
+        { 
+          "label": "A", 
+          "image": "HS-A.png"
+        },
+        { 
+          "label": "C", 
+          "image": "HS-C.png"
+        },
+        {
+          "label": "B",
+          "image": "HS-B.png"
+        }
+      ],
+      "feedback": "Pasangan yang benar adalah: A - gambar kedua, C - gambar ketiga, B - gambar pertama."
+    },
+    {
+      "id": "CEQID0004",
+      "points": 2,
+      "text": "Identifikasi gerakan tangan untuk huruf 'V'.",
+      "type": "Multiple",
+      "answer_options": [
+        {
+          "text": "Z",
+          "image": "HS-Z.png"
+        },
+        {
+          "text": "D",
+          "image": "HS-D.png"
+        },
+        {
+          "text": "V",
+          "image": "HS-V.png"
+        }
+      ],
+      "correct_answer": "V",
+      "feedback": "Gerakan tangan untuk huruf 'V' ditunjukkan oleh gambar ketiga."
+    },
+    {
+      "id": "CEQID0005",
+      "points": 3,
+      "text": "Simulasikan gerakan tangan untuk huruf 'C'.",
+      "type": "Simulation",
+      "answer_options": [],
+      "correct_answer": "C",
+      "feedback": "Gerakan tangan untuk huruf 'C' dibuat dengan membentuk bentuk 'C' dengan tangan."
+    },
+    {
+      "id": "CEQID0006",
+      "points": 4,
+      "text": "Sesuaikan setiap huruf dengan gerakan tangan yang sesuai.",
+      "type": "Matching",
+      "answer_options": [
+        {
+          "label": "D",
+          "image": "HS-P.png"
+        },
+        {
+          "label": "Q",
+          "image": "HS-Q.png"
+        },
+        {
+          "label": "P",
+          "image": "HS-D.png"
+        }
+      ],
+      "correct_answer": [
+        {
+          "label": "D",
+          "image": "HS-D.png"
+        },
+        {
+          "label": "Q",
+          "image": "HS-Q.png"
+        },
+        {
+          "label": "P",
+          "image": "HS-P.png"
+        }
+      ],
+      "feedback": "Pasangan yang benar adalah: D - gambar ketiga, Q - gambar kedua, P - gambar pertama."
+    },
+    {
+      "id": "CEQID0007",
+      "points": 2,
+      "text": "Identifikasi gerakan tangan untuk huruf 'X'.",
+      "type": "Multiple",
+      "answer_options": [
+        {
+          "text": "C",
+          "image": "HS-C.png"
+        },
+        {
+          "text": "X",
+          "image": "HS-X.png"
+        },
+        {
+          "text": "S",
+          "image": "HS-S.png"
+        }
+      ],
+      "correct_answer": "X",
+      "feedback": "Gerakan tangan untuk huruf 'X' ditunjukkan oleh gambar kedua."
+    },
+    {
+      "id": "CEQID0008",
+      "points": 3,
+      "text": "Simulasikan gerakan tangan untuk huruf 'E'.",
+      "type": "Simulation",
+      "answer_options": [],
+      "correct_answer": "E",
+      "feedback": "Gerakan tangan untuk huruf 'E' dibuat dengan membentuk bentuk 'E' dengan jari-jari."
+    },
+    {
+      "id": "CEQID0009",
+      "points": 4,
+      "text": "Sesuaikan setiap huruf dengan gerakan tangan yang sesuai.",
+      "type": "Matching",
+      "answer_options": [
+        {
+          "label": "G",
+          "image": "HS-E.png"
+        },
+        {
+          "label": "E",
+          "image": "HS-G.png"
+        },
+        {
+          "label": "Y",
+          "image": "HS-Y.png"
+        }
+      ],
+      "correct_answer": [
+        {
+          "label": "G",
+          "image": "HS-G.png"
+        },
+        {
+          "label": "E",
+          "image": "HS-E.png"
+        },
+        {
+          "label": "Y",
+          "image": "HS-Y.png"
+        }
+      ],
+      "feedback": "Pasangan yang benar adalah: G - gambar kedua, E - gambar pertama, Y - gambar ketiga."
+    },
+    {
+      "id": "CEQID0010",
+      "points": 3,
+      "text": "Identifikasi gerakan tangan untuk huruf 'D'.",
+      "type": "Multiple",
+      "answer_options": [
+        {
+          "text": "H",
+          "image": "HS-H.png"
+        },
+        {
+          "text": "D",
+          "image": "HS-D.png"
+        },
+        {
+          "text": "A",
+          "image": "HS-A.png"
+        }
+      ],
+      "correct_answer": "D",
+      "feedback": "Gerakan tangan untuk huruf 'D' ditunjukkan oleh gambar kedua."
+    },
+    {
+      "id": "CEQID0011",
+      "points": 10,
+      "text": "Simulasikan gerakan tangan untuk kata 'Halo'.",
+      "type": "Simulation",
+      "answer_options": [],
+      "correct_answer": "Halo",
+      "feedback": "Gerakan tangan untuk kata 'Halo' dibuat dengan cara mengangkat tangan ke atas dan melambaikan tangan."
+    },
+    {
+      "id": "CEQID0012",
+      "points": 10,
+      "text": "Simulasikan gerakan tangan untuk kata 'Saya'.",
+      "type": "Simulation",
+      "answer_options": [],
+      "correct_answer": "Saya",
+      "feedback": "Gerakan tangan untuk kata 'Saya' dibuat dengan cara menunjuk ke arah diri sendiri."
+    },
+    {
+      "id": "CEQID0013",
+      "points": 10,
+      "text": "Simulasikan gerakan tangan untuk kata 'Cantik'.",
+      "type": "Simulation",
+      "answer_options": [],
+      "correct_answer": "Cantik",
+      "feedback": "Gerakan tangan untuk kata 'Cantik' dibuat dengan cara menunjuk ke arah wajah."
+    },
+    {
+      "id": "CEQID0014",
+      "points": 10,
+      "text": "Simulasikan gerakan tangan untuk kata 'Sunyi'.",
+      "type": "Simulation",
+      "answer_options": [],
+      "correct_answer": "Sunyi",
+      "feedback": "Gerakan tangan untuk kata 'Sunyi' dibuat dengan cara menutup telinga dengan telapak tangan."
+    },
+    {
+      "id": "CEQID0015",
+      "points": 10,
+      "text": "Simulasikan gerakan tangan untuk kata 'Kamu'.",
+      "type": "Simulation",
+      "answer_options": [],
+      "correct_answer": "Kamu",
+      "feedback": "Gerakan tangan untuk kata 'Kamu' dibuat dengan cara melambaikan tangan ke arah orang lain."
+    }
+  ]
+}

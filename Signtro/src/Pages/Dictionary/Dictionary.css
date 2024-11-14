@@ -1,0 +1,47 @@
+.dictionary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+    margin: 50px auto;
+    max-width: calc(100vw - 25%);
+}
+
+.dictionary-item {
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s;
+    width: 100%;
+    max-width: 150px;
+}
+
+.dictionary-item:hover {
+    transform: scale(1.05);
+}
+
+.dictionary-item img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    height: auto;
+}
+
+.dictionary-item h2 {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .dictionary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .dictionary-grid {
+        grid-template-columns: 1fr;
+    }
+}
