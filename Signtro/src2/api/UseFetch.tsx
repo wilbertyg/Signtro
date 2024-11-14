@@ -13,7 +13,7 @@ const UseFetch = (url: string): UseFetchResult => {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch(url)
+            fetch("http://localhost:3000/" + url)
                 .then(res => {
                     if (!res.ok) {
                         throw Error('Error fetching users data');

@@ -108,7 +108,10 @@ function Courses() {
                                                 <Col>
                                                     {crs.course_exercises.map((exercise, index) => (
                                                         <Button className="btn-primary exercise-button fs-5"
-                                                                onClick={() => navigate(`/courses?id=${crs.id}&exercise_id=${exercise.id}`)}>
+                                                                onClick={() => {
+                                                                    navigate(`/courses?id=${crs.id}&exercise_id=${exercise.id}`);
+                                                                    window.location.reload();
+                                                                }}>
                                                             {exercise.icon}
                                                         </Button>
                                                     ))}
