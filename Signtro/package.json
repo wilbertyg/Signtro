@@ -8,8 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "backend": "npx json-server --watch public/api/db.json --port 3000",
-    "start": "concurrently \"npm run json-server\" \"npm run dev\""
+    "json-server": "npx json-server --watch public/api/db.json --port 3000",
+    "all": "concurrently \"npm run json-server\" \"npm run dev\""
   },
   "dependencies": {
     "@tanstack/react-query": "^5.59.16",
