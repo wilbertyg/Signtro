@@ -1,8 +1,8 @@
 import Footer from "../../Components/Footer.jsx";
 import {useEffect, useState} from "react";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {Col, Container, Placeholder, ProgressBar, Row, Stack, Button} from "react-bootstrap";
-import GetRequest from "../../helpers/GetRequest";
+import GetService from "../../helpers/GetService.tsx";
 import Background from "../../assets/backgrounds/Background - Sign Language Abstract.svg";
 import './Courses.css';
 
@@ -13,7 +13,7 @@ function Courses() {
 
     const navigate = useNavigate();
 
-    const {data: courses, isPending, error} = GetRequest('/courses');
+    const {data: courses, isPending, error} = GetService('/courses');
     const [selectedCourse, setSelectedCourse] = useState(null);
 
     const handleCourseClick = (course) => {
@@ -109,8 +109,14 @@ function Courses() {
                                                     {crs.course_exercises.map((exercise, index) => (
                                                         <Button className="btn-primary exercise-button fs-5"
                                                                 onClick={() => {
-                                                                    navigate(`/courses?id=${crs.id}&exercise_id=${exercise.id}`);
-                                                                    window.location.reload();
+                                                                    navigate('/courses/exercises', {
+                                                                        state:
+                                                                            {
+                                                                                id: crs.id,
+                                                                                exercise_id: exercise.id,
+                                                                                icon: exercise.icon
+                                                                            }
+                                                                    });
                                                                 }}>
                                                             {exercise.icon}
                                                         </Button>

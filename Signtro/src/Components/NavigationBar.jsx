@@ -15,8 +15,8 @@ function NavigationBar() {
                     </Navbar.Brand>
                     <Nav variant="underline" className="justify-content-center" style={{ gap: '60px'}}>
                         <Nav.Link href="/" className={`fw-bold ${location.pathname === '/' ? 'active' : ''}`}>Home</Nav.Link>
-                        <Nav.Link href="/courses" className={`fw-bold ${location.pathname === '/courses' ? 'active' : ''}`}>Courses</Nav.Link>
-                        <Nav.Link href="/dictionary" className={`fw-bold ${location.pathname === '/dictionary' ? 'active' : ''}`}>Dictionary</Nav.Link>
+                        <Nav.Link href="/courses" className={`fw-bold ${location.pathname.startsWith('/courses') ? 'active' : ''}`}>Courses</Nav.Link>
+                        <Nav.Link href="/dictionary" className={`fw-bold ${location.pathname.startsWith('/dictionary') ? 'active' : ''}`}>Dictionary</Nav.Link>
                     </Nav>
                     <Nav>
                         <Nav.Link href="/profile">
