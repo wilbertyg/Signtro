@@ -27,7 +27,8 @@
 .exercise-button {
     background-color: white;
     border-color: limegreen;
-    margin: 0px;
+    color: limegreen;
+    margin: 10px;
     padding: 0px;
     width: 40px;
     height: 40px;
@@ -37,5 +38,4 @@
 
 .exercise-button:hover {
     background-color: limegreen;
-    border-color: white;
 }

@@ -6,7 +6,7 @@ interface RequestResult {
     error: any | null;
 }
 
-const GetRequest = (url: string): RequestResult => {
+const GetService = (url: string): RequestResult => {
     const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
@@ -40,4 +40,4 @@ const GetRequest = (url: string): RequestResult => {
     return {data, isPending, error};
 }
 
-export default GetRequest;
+export default GetService;

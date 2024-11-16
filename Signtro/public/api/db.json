@@ -119,11 +119,11 @@
     {
       "id": "CEQID0002",
       "points": 3,
-      "text": "Simulasikan gerakan tangan untuk huruf 'A'.",
+      "text": "Simulasikan gerakan tangan untuk huruf 'D'.",
       "type": "Simulation",
       "answer_options": [],
-      "correct_answer": "A",
-      "feedback": "Gerakan tangan untuk huruf 'A' dibuat dengan membentuk segitiga dengan jempol yang diperpanjang."
+      "correct_answer": "D",
+      "feedback": "Gerakan tangan untuk huruf D dibuat dengan membentuk bentuk 'D' dengan jari-jari."
     },
     {
       "id": "CEQID0003",

@@ -12,9 +12,7 @@
     "all": "concurrently \"npm run json-server\" \"npm run dev\""
   },
   "dependencies": {
-<<<<<<< HEAD
     "axios": "^1.7.7",
-=======
     "@tanstack/react-query": "^5.59.16",
 >>>>>>> 96ac41848b969ff772b7d984b0c85ef8cf948fe8
     "bootstrap": "^5.3.3",

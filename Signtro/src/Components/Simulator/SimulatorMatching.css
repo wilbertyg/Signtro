@@ -1,0 +1,63 @@
+.hidden-element {
+    display: none;
+}
+
+.hidden-element p {
+    margin: 0;
+    padding: 0;
+}
+
+.squashed-reset-button {
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    border-radius: 6px 6px 0 0;
+    padding: 2px;
+}
+
+.matching-button {
+    background-color: white;
+    border-color: limegreen;
+    color: limegreen;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.matching-button:hover {
+    background-color: limegreen;
+    border-color: white;
+    color: white;
+    transform: scale(1.05);
+}
+
+.matching-button-selected {
+    background-color: limegreen;
+    border-color: white;
+    color: white;
+}
+
+.matching-image-box {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.matching-image-box img {
+    width: 128px;
+    height: 128px;
+    border-radius: 6px;
+}
+
+.matching-image-box-selected {
+    border: 2px solid limegreen;
+}
