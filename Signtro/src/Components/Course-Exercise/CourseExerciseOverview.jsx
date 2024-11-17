@@ -1,45 +1,66 @@
 import {useLocation, useNavigate} from "react-router-dom";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import GetService from "../../helpers/GetService.tsx";
-import {Button, Col, Container, Placeholder, ProgressBar, Row, Stack} from "react-bootstrap";
+import {Button, Col, Placeholder, Stack} from "react-bootstrap";
 import './CourseExerciseOverview.css'
 
-function CourseExerciseOverview(data) {
+function CourseExerciseOverview() {
+    const [exerciseContent, setExerciseContent] = useState(null);
+    const [isPending, setIsPending] = useState(true);
+    const [error, setError] = useState(null);
+    const [randomizedQuestions, setRandomizedQuestions] = useState([]);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const {exercise_id} = location.state;
+
     useEffect(() => {
         document.title = 'Exercise Overview | Signtro';
+
+        setTimeout(() => {
+            fetch("http://localhost:3000/course_exercises/" + exercise_id)
+                .then(res => {
+                    if (!res.ok) {
+                        throw Error('Error fetching data');
+                    }
+
+                    return res.json();
+                })
+                .then(data => {
+                    setExerciseContent(data);
+                    setRandomizedQuestions(data.exercise_questions);
+                    setIsPending(false);
+                })
+                .catch(err => {
+                    setError(err.message);
+                });
+        }, 1000);
     }, []);
 
-    const {data: exerciseContent, isPending, error} = GetService(`/course_exercises/${data.id}`);
-    const navigate = useNavigate();
-    const location = useLocation();
-
     const handleBack = () => {
-        console.log('Back to courses.');
         navigate('/courses');
+        window.location.reload();
     }
 
     const handleBegin = () => {
-        console.log('Begin exercise!');
-
         navigate('/courses/exercises', {
             state:
                 {
-                    id: location.state.id,
+                    status: "questions",
                     exercise_id: location.state.exercise_id,
-                    question_id: exerciseContent.exercise_questions[0],
-                    questions_length: exerciseContent.exercise_questions.length,
-                    icon: location.state.icon,
-                    question_ids: exerciseContent.exercise_questions,
-                    finished: false
+                    question_ids: randomizedQuestions,
+                    icon: location.state.icon
                 }
         });
+        window.location.reload();
     }
 
     return (
         <>
             {isPending &&
                 <Stack direction="horizontal" className="align-items-start justify-content-evenly" gap={5} style={{margin: '25px 100px'}}>
-                    <Col md={6} className="course-container" style={{minHeight: '75vh'}}>
+                    <Col md={6} className="exercise-container" style={{minHeight: '75vh'}}>
                         <Placeholder as="h4" animation="glow" className="text-center" style={{marginBottom: '25px'}}>
                             <Placeholder xs={5} />
                         </Placeholder>
@@ -81,7 +102,7 @@ function CourseExerciseOverview(data) {
                 <Stack direction="horizontal" className="align-items-start justify-content-evenly" gap={5} style={{margin: '25px 100px'}}>
                     <Col md={6} className="exercise-container">
                         <h4 className="fs-3 fw-bold text-center" style={{marginBottom: '25px'}}>
-                            {data.icon} {exerciseContent.title}
+                            {location.state.icon} {exerciseContent.title}
                         </h4>
                         <Stack direction="horizontal" className="text-start">
                             <p style={{color: 'darkgray'}}><b>Status:&nbsp;</b></p><p style={{color: 'limegreen'}}>{exerciseContent.status}</p>

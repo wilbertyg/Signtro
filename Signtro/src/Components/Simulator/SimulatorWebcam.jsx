@@ -7,16 +7,19 @@ import './SimulatorWebcam.css';
 import Visibility_On from "../../assets/icons/Visibility-On.svg";
 import Visibility_Off from "../../assets/icons/Visibility-Off.svg";
 
-function SimulatorWebcam(correctAnswer) {
+function SimulatorWebcam(answer, correctAnswer) {
     const WebcamCapture = () => {
         const webcamRef = useRef(null);
         const [isVisible, setIsVisible] = useState(false);
+        const [caption, setCaption] = useState('ENABLE WEBCAM');
 
-        const [captureResult, setCaptureResult] = useState('');
+        const [captureResult, setCaptureResult] = useState(answer);
         const [detectedAccuracy, setDetectedAccuracy] = useState(0);
         const [targetAccuracy, setTargetAccuracy] = useState(0);
 
         useEffect(() => {
+            let currentAnswer = document.getElementById("currentAnswer");
+
             const interval = setInterval(async () => {
                 const webcam = document.getElementById("webcam");
                 if (webcam === null) {
@@ -32,7 +35,8 @@ function SimulatorWebcam(correctAnswer) {
                     setDetectedAccuracy(detectedAccuracy)
                     setTargetAccuracy(targetAccuracy)
 
-                    console.log(result, detectedAccuracy, targetAccuracy);
+                    currentAnswer.textContent = result;
+                    console.log('[SUCCESS] Result: ', result, 'Detected Accuracy: ', detectedAccuracy, 'Target Accuracy: ', targetAccuracy);
                 }
                 catch (error) {
                     console.error('[ERROR] Failed uploading the image: ', error);
@@ -45,16 +49,23 @@ function SimulatorWebcam(correctAnswer) {
         const switchWebcamVisibility = () => {
             if (isVisible) {
                 setIsVisible(false);
+                setCaption('ENABLE WEBCAM');
             }
             else {
                 setIsVisible(true);
+                setCaption('PLEASE STAND STILL TO GET YOUR ANSWER. DISABLING WEBCAM IN 5 SECONDS...');
+
+                setTimeout(() => {
+                    setIsVisible(false);
+                    setCaption('ENABLE WEBCAM');
+                }, 5000);
             }
         }
 
         return (
             <Card style={{width: '450px'}}>
                 <Button variant="secondary" className="squashed-button" onClick={switchWebcamVisibility}>
-                    {isVisible ? "DISABLE WEBCAM" : "ENABLE WEBCAM"}
+                    {caption}
                 </Button>
                 {!isVisible &&
                     <div className="webcam-placeholder">
@@ -78,18 +89,18 @@ function SimulatorWebcam(correctAnswer) {
                     <Stack direction="horizontal" gap={0}>
                         <Col className="column-master left-side">
                             <h4 className="column-title">TARGET</h4>
-                            <Stack direction="horizontal" className="column-child justify-content-evenly align-items-center">
+                            <Stack direction="horizontal" className="column-child justify-content-center align-items-center" gap={3}>
                                 <p className="column-text fw-bold fs-4 text-center text-truncate">{correctAnswer}</p>
-                                <p className="column-text fw-bold fs-4 text-center">&nbsp;-&nbsp;</p>
-                                <p className="column-text fw-bold fs-4 text-center text-truncate">{targetAccuracy}%</p>
+                                <hr className="column-separator"/>
+                                <p className="column-text fw-bold fs-4 text-center" style={{width: 'auto'}}>{targetAccuracy}%</p>
                             </Stack>
                         </Col>
                         <Col className="column-master right-side">
                             <h4 className="column-title">DETECTED</h4>
-                            <Stack direction="horizontal" className="column-child justify-content-evenly align-items-center">
+                            <Stack direction="horizontal" className="column-child justify-content-center align-items-center" gap={3}>
                                 <p id="prediction-result" className="column-text fw-bold fs-4 text-center text-truncate">{captureResult !== '' ? captureResult : '?'}</p>
-                                <p className="column-text fw-bold fs-4 text-center">&nbsp;-&nbsp;</p>
-                                <p className="column-text fw-bold fs-4 text-center text-truncate">{detectedAccuracy}%</p>
+                                <hr className="column-separator"/>
+                                <p className="column-text fw-bold fs-4 text-center" style={{width: 'auto'}}>{detectedAccuracy}%</p>
                             </Stack>
                         </Col>
                     </Stack>

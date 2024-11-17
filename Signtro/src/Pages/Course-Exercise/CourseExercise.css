@@ -1,0 +1,8 @@
+.hidden-answers {
+  display: none;
+}
+
+.hidden-answers p {
+    margin: 0;
+    padding: 0;
+}

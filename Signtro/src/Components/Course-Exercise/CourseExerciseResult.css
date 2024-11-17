@@ -1,0 +1,82 @@
+.result-container {
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.examination-container {
+    border: 1px solid darkgray;
+    width: 95%;
+    border-radius: 6px;
+    gap: 5px;
+}
+
+.examination-header-row {
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.examination-header-text {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.examination-header-text p {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.examination-row {
+    background-color: white;
+    width: 100%;
+    margin: 0;
+}
+
+.last-row {
+    border-radius: 0 0 6px 6px;
+}
+
+.examination-item-number {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.examination-item-number p {
+    padding: 5px 0;
+    margin: 0;
+}
+
+.examination-item-result {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.examination-item-result p {
+    padding: 5px 0;
+    margin: 0;
+}
+
+.examination-item-feedback {
+    font-size: 1rem;
+}
+
+.examination-item-feedback p {
+    padding: 5px 0;
+    margin: 0;
+}
+
+.examination-item-result-correct {
+    color: limegreen;
+}
+
+.examination-item-result-incorrect {
+    color: darkred;
+}

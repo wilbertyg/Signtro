@@ -1,12 +1,3 @@
-.hidden-element {
-    display: none;
-}
-
-.hidden-element p {
-    margin: 0;
-    padding: 0;
-}
-
 .squashed-reset-button {
     font-size: 0.75rem;
     letter-spacing: 5px;

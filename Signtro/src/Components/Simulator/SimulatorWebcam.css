@@ -32,11 +32,18 @@
 }
 
 .column-text {
-    margin-bottom: 0px;
-    max-width: 50px;
+    margin-bottom: 0;
+    max-width: 145px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.column-separator {
+    width: 1px;
+    height: 30px;
+    background-color: gray;
+    margin: 0;
 }
 
 .webcam-placeholder {

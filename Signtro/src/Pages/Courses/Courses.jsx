@@ -10,11 +10,11 @@ function Courses() {
     useEffect(() => {
         document.title = 'Courses | Signtro';
     }, []);
+    const [selectedCourse, setSelectedCourse] = useState(null);
 
     const navigate = useNavigate();
 
     const {data: courses, isPending, error} = GetService('/courses');
-    const [selectedCourse, setSelectedCourse] = useState(null);
 
     const handleCourseClick = (course) => {
         setSelectedCourse(course);
@@ -112,7 +112,7 @@ function Courses() {
                                                                     navigate('/courses/exercises', {
                                                                         state:
                                                                             {
-                                                                                id: crs.id,
+                                                                                status: 'overview',
                                                                                 exercise_id: exercise.id,
                                                                                 icon: exercise.icon
                                                                             }
