@@ -29,7 +29,7 @@ function CourseExerciseOverview() {
                 })
                 .then(data => {
                     setExerciseContent(data);
-                    setRandomizedQuestions(data.exercise_questions);
+                    setRandomizedQuestions(data.exercise_questions.sort(() => Math.random() - 0.5));
                     setIsPending(false);
                 })
                 .catch(err => {
