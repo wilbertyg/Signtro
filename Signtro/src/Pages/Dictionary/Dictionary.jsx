@@ -1,13 +1,16 @@
 import Footer from "../../Components/Footer.jsx";
-import {Container, Image, Row} from "react-bootstrap";
+import {Button, Container, Image, Row} from "react-bootstrap";
 import './Dictionary.css';
 import Background from "../../assets/backgrounds/Background - Sign Language Abstract.svg";
 import {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 
 function Dictionary() {
     useEffect(() => {
         document.title = 'Dictionary | Signtro';
     }, []);
+
+    const navigate = useNavigate();
 
     return (
         <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
@@ -24,13 +27,16 @@ function Dictionary() {
                     height: '100vh',
                     zIndex: -1
                 }}/>
-                <Row>
+                <Row className="justify-content-center">
                     <h1 className="fw-bold text-center text-wrap" style={{color: 'limegreen'}}>
                         26 Huruf. 26 Isyarat Tangan.
                     </h1>
                     <p className="lead fw-semibold text-center text-wrap">
                         Sebagai dasar dari Bahasa Isyarat, setiap huruf memiliki isyarat tangan yang unik.
                     </p>
+                    <Button className="btn-primary" size="lg" style={{width: '175px', marginTop: '25px'}} onClick={() => navigate('/dictionary/simulation')}>
+                        ✌️ Yuk simulasi!
+                    </Button>
                 </Row>
                 <div className="dictionary-grid">
                     {signs.map((sign, index) => (

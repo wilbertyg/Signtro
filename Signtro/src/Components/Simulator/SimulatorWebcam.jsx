@@ -52,18 +52,26 @@ function SimulatorWebcam(answer, correctAnswer) {
                 setCaption('ENABLE WEBCAM');
             }
             else {
-                setIsVisible(true);
-                setCaption('PLEASE STAND STILL TO GET YOUR ANSWER. DISABLING WEBCAM IN 5 SECONDS...');
+                if (correctAnswer !== '')
+                {
+                    setIsVisible(true);
+                    setCaption('PLEASE STAND STILL TO GET YOUR ANSWER. DISABLING WEBCAM IN 5 SECONDS...');
 
-                setTimeout(() => {
-                    setIsVisible(false);
-                    setCaption('ENABLE WEBCAM');
-                }, 5000);
+                    setTimeout(() => {
+                        setIsVisible(false);
+                        setCaption('ENABLE WEBCAM');
+                    }, 5000);
+                }
+                else
+                {
+                    setIsVisible(true);
+                    setCaption('DISABLE WEBCAM');
+                }
             }
         }
 
         return (
-            <Card style={{width: '450px'}}>
+            <Card style={{width: '450px', padding: '0'}}>
                 <Button variant="secondary" className="squashed-button" onClick={switchWebcamVisibility}>
                     {caption}
                 </Button>
@@ -87,14 +95,16 @@ function SimulatorWebcam(answer, correctAnswer) {
                 }
                 <Card.Body style={{padding: '0rem 0rem'}}>
                     <Stack direction="horizontal" gap={0}>
-                        <Col className="column-master left-side">
-                            <h4 className="column-title">TARGET</h4>
-                            <Stack direction="horizontal" className="column-child justify-content-center align-items-center" gap={3}>
-                                <p className="column-text fw-bold fs-4 text-center text-truncate">{correctAnswer}</p>
-                                <hr className="column-separator"/>
-                                <p className="column-text fw-bold fs-4 text-center" style={{width: 'auto'}}>{targetAccuracy}%</p>
-                            </Stack>
-                        </Col>
+                        {correctAnswer !== '' &&
+                            <Col className="column-master left-side">
+                                <h4 className="column-title">TARGET</h4>
+                                <Stack direction="horizontal" className="column-child justify-content-center align-items-center" gap={3}>
+                                    <p className="column-text fw-bold fs-4 text-center text-truncate">{correctAnswer}</p>
+                                    <hr className="column-separator"/>
+                                    <p className="column-text fw-bold fs-4 text-center" style={{width: 'auto'}}>{targetAccuracy}%</p>
+                                </Stack>
+                            </Col>
+                        }
                         <Col className="column-master right-side">
                             <h4 className="column-title">DETECTED</h4>
                             <Stack direction="horizontal" className="column-child justify-content-center align-items-center" gap={3}>

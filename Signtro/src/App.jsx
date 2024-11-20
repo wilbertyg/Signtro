@@ -6,6 +6,7 @@ import Dictionary from "./Pages/Dictionary/Dictionary.jsx";
 import Profile from "./Pages/Profile/Profile.jsx";
 import Error from "./Pages/Error/Error.jsx";
 import CourseExercise from "./Pages/Course-Exercise/CourseExercise.jsx";
+import Simulation from "./Pages/Simulation/Simulation.jsx";
 
 function App() {
     return (
@@ -17,7 +18,10 @@ function App() {
                         <Route index element={<Courses />} />
                         <Route path="exercises" element={<CourseExercise />} />
                     </Route>
-                    <Route path="dictionary" element={<Dictionary />} />
+                    <Route path="dictionary">
+                        <Route index element={<Dictionary />} />
+                        <Route path="simulation" element={<Simulation />} />
+                    </Route>
                     <Route path="profile" element={<Profile />} />
                     <Route path="*" element={<Error />} />
                 </Route>
